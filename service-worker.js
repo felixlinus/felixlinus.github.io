@@ -1,5 +1,5 @@
 // Fahrgastzähler: caches only this static app, never transfers passenger observations.
-const CACHE = 'fahrgastzaehler-pwa-2026-11-v4-autojson-timestamp';
+const CACHE = 'fahrgastzaehler-pwa-2026-11-v5';
 const FILES = ['./', './index.html', './Fahrgastzaehler.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting()));
