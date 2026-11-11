@@ -1,0 +1,86 @@
+FAHRGASTZÄHLER – RUNDKURS-VERSION (KOSTENLOS)
+============================================
+
+DIE NEUE RUNDKURS-FUNKTION
+- Nach Bestätigung der LETZTEN Haltestelle springt die App automatisch
+  zur ERSTEN Haltestelle der NÄCHSTEN Runde.
+- "Aktuelle Runde" und "Runden abgeschlossen" werden laufend angezeigt.
+- Die momentane Busbelegung wird beim Rundenwechsel übernommen;
+  sie wird NICHT auf 0 zurückgesetzt.
+- Der Button "Zurück" funktioniert auch über die Rundengrenze.
+- Im Haltestellenbereich kannst du zwischen früheren Runden wechseln,
+  um Einträge der jeweiligen Runde zu überprüfen und zu korrigieren.
+- Du kannst jederzeit "Übersicht & Export" aufrufen und die Zählung
+  danach fortsetzen. Es gibt keine feste Rundenzahl.
+- In Excel gibt es drei Tabellenblätter: "Haltestellen", "Übersicht"
+  und "Rundenauswertung". Jede Haltestelle trägt eine Rundennummer.
+- Bei einer noch laufenden Runde stehen die zukünftigen Haltestellen
+  in der Übersicht auf "Offen".
+
+SICHERUNG & BESTEHENDE DATEN
+Die neue Version verwendet denselben lokalen Browser-Speicher wie die
+vorherige Version und übernimmt vorhandene Erhebungen auf DEMSELBEN
+GERÄT und in DEMSELBEN BROWSER, soweit dieser Speicher noch vorhanden
+ist. Die vorherige JSON-Sicherung (Version 1) lässt sich ebenfalls laden.
+Sichere vor dem Update zur Vorsicht die alte Erhebung als JSON-Datei.
+
+SOFORT LOSLEGEN UNTER WINDOWS
+"Fahrgastzaehler.html" im Browser öffnen (Chrome, Edge, Firefox).
+Zum bloßen Zählen und für den Export ist keine Installation notwendig.
+
+ANDROID / iPHONE – ALS WEB-APP INSTALLIEREN
+Für die Installation auf dem Startbildschirm werden die Dateien auf
+HTTPS benötigt. Kostenlos möglich via GitHub Pages:
+
+1. Kostenloses GitHub-Konto verwenden und ein öffentliches Repository
+   erstellen (z. B. "fahrgastzaehler").
+2. Die Dateien aus dem ZIP im Stammverzeichnis des Repository hochladen.
+3. Settings > Pages > Deploy from a branch > main > /(root) aktivieren.
+4. Die HTTPS-Seite im Handy-Browser öffnen.
+5. iPhone: Safari > Teilen > "Zum Home-Bildschirm".
+   Android: Chrome > Menü > "App installieren" oder
+   "Zum Startbildschirm hinzufügen".
+6. Die Seite einmal online öffnen. Anschließend arbeitet sie offline.
+
+UPDATE EINER BEREITS INSTALLIERTEN WEB-APP
+Dateien im bisherigen GitHub-Repository durch die neuen Dateien ersetzen.
+Der Offline-Cache hat eine neue Versionsnummer. Nach der Veröffentlichung
+geöffnete App aktualisieren; gegebenenfalls zweimal neu laden.
+Daten werden dadurch normalerweise nicht gelöscht; vorher dennoch JSON
+sichern. Nur denselben Ursprung (URL) und Browser behalten, wenn lokale
+Daten automatisch erhalten bleiben sollen.
+
+BEDIENUNG
+1. Linie, Richtung, Erhebungsdatum und Anfangsbelegung angeben.
+2. Haltestellen eine pro Zeile in der Reihenfolge des Rundkurses eingeben
+   oder eine TXT-/CSV-Datei mit Haltestellen importieren.
+3. "Rundkurs-Erhebung starten".
+4. Pro Haltestelle ein- und ausgestiegene Personen eingeben.
+   0/0 = Bus hat gehalten, niemand steigt ein oder aus.
+   "–" bzw. "Nicht gehalten" = Bus ist durchgefahren.
+5. "Bestätigen & weiter" führt zur nächsten Haltestelle.
+   Nach der letzten Haltestelle beginnt die nächste Runde automatisch.
+6. "Zurück" oder die Rundennavigation zur Korrektur benutzen.
+7. Jederzeit "Übersicht & Export" anklicken, Excel oder CSV herunterladen.
+8. Zur Sicherung JSON herunterladen (regelmäßig empfohlen).
+
+DATEIEN
+index.html                         Startseite für GitHub Pages / Web-App
+Fahrgastzaehler.html              Dieselbe App für Windows ohne Installation
+manifest.webmanifest               Installationsinformationen
+service-worker.js                  Offline-Cache (neue Version)
+icon-192.png / icon-512.png        App-Symbole
+Beispiel_Haltestellen.csv          Importbeispiel
+ANLEITUNG_Fahrgastzaehler.txt     Diese Anleitung
+
+DATENSCHUTZ
+Keine Anmeldung, keine Werbung, kein externer Datensynchronisationsdienst.
+Erhebungsdaten bleiben im Browser (localStorage); der Excel-Export
+wird direkt im Browser erstellt. Weder Excel- noch JSON-Dateien werden
+über das Internet übertragen. GitHub Pages kann technische Aufrufdaten
+protokollieren, nicht jedoch lokal gespeicherte Zählergebnisse auslesen.
+Achtung: Privatmodus, Bereinigung von Browserdaten oder Gerätewechsel
+können zu Datenverlust führen. JSON-/Excel-Sicherung regelmäßig anlegen.
+
+Hinweis: Beim öffentlichen GitHub-Upload NUR Programmdateien hochladen,
+niemals Sicherungs-/Excel-Dateien mit echten Erhebungsdaten.
